@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drug Galaxy</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- tells the browser where to find three.js and d3 when the .js files import them -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+        "d3": "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Drug Galaxy</h1>
+    <p class="subtitle">Each of these 2,136 approved drugs is drawn as its real 3D molecule. Drugs that look alike chemically sit close together. Do drugs that treat the same thing end up in the same place?</p>
+  </header>
+
+  <main class="layout">
+    <!-- left: the 3D galaxy -->
+    <section class="galaxy-card">
+      <div class="galaxy-top">
+        <div class="toggles">
+          <div class="toggle" role="group" aria-label="Layout">
+            <button id="btn-tsne" class="active">t-SNE</button>
+            <button id="btn-pca">PCA</button>
+          </div>
+          <div class="toggle" role="group" aria-label="Color by">
+            <button id="btn-group" class="active">Color by group</button>
+            <button id="btn-atoms">Color by atom</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="galaxy"></div>
+      <div id="tooltip" hidden></div>
+      <div id="atom-key" class="atom-key" hidden>
+        <span><i style="background:#4D4D4D"></i>Carbon</span>
+        <span><i style="background:#E0453A"></i>Oxygen</span>
+        <span><i style="background:#3A6FE0"></i>Nitrogen</span>
+        <span><i style="background:#E3B53A"></i>Sulfur</span>
+        <span><i style="background:#3FB14A"></i>Halogen</span>
+        <span><i style="background:#B07AB0"></i>Other</span>
+      </div>
+      <p class="how">Drag to rotate · Scroll to zoom · Hover or click a molecule</p>
+      <p id="axis-note" class="axis-note"></p>
+    </section>
+
+    <!-- right: the answer and the bar chart -->
+    <section class="answer-card">
+      <!-- shows the overall answer, until a molecule is clicked (see compare.js) -->
+      <div id="drug-panel" class="drug-panel">
+        <p class="answer"><b>Look-alike drugs usually treat the same thing.</b> A drug's 10 closest look-alikes share its therapeutic group <b>3.3× more often than chance</b>, and every one of the 14 groups beats chance.</p>
+        <p class="click-hint">Click any molecule to see if that's true for it.</p>
+      </div>
+
+      <h2>Do look-alikes share a group?</h2>
+      <p class="chart-hint">Click a bar to light that group up in the galaxy (up to 3).</p>
+      <div id="barchart"></div>
+      <div id="bar-tooltip" hidden></div>
+    </section>
+  </main>
+
+  <!-- RDKit.js: draws the molecules in the comparison panel -->
+  <script src="https://unpkg.com/@rdkit/rdkit@2025.3.4-1.0.0/dist/RDKit_minimal.js"></script>
+  <script type="module" src="galaxy.js"></script>
+</body>
+</html>

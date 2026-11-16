@@ -1,0 +1,121 @@
+{
+  "pca_axis_labels": [
+    "PC1 (3.5% of variation)",
+    "PC2 (2.4% of variation)",
+    "PC3 (2.0% of variation)"
+  ],
+  "groups": [
+    {
+      "group": "V",
+      "name": "Various",
+      "n_drugs": 80,
+      "real": 0.36,
+      "chance": 0.062,
+      "times_chance": 5.82
+    },
+    {
+      "group": "M",
+      "name": "Musculo-skeletal",
+      "n_drugs": 93,
+      "real": 0.371,
+      "chance": 0.073,
+      "times_chance": 5.1
+    },
+    {
+      "group": "H",
+      "name": "Hormones (non-sex)",
+      "n_drugs": 33,
+      "real": 0.452,
+      "chance": 0.106,
+      "times_chance": 4.26
+    },
+    {
+      "group": "J",
+      "name": "Anti-infectives",
+      "n_drugs": 230,
+      "real": 0.652,
+      "chance": 0.154,
+      "times_chance": 4.24
+    },
+    {
+      "group": "G",
+      "name": "Genito-urinary & sex hormones",
+      "n_drugs": 110,
+      "real": 0.462,
+      "chance": 0.12,
+      "times_chance": 3.84
+    },
+    {
+      "group": "P",
+      "name": "Antiparasitic",
+      "n_drugs": 57,
+      "real": 0.225,
+      "chance": 0.065,
+      "times_chance": 3.44
+    },
+    {
+      "group": "R",
+      "name": "Respiratory",
+      "n_drugs": 134,
+      "real": 0.449,
+      "chance": 0.136,
+      "times_chance": 3.3
+    },
+    {
+      "group": "C",
+      "name": "Cardiovascular",
+      "n_drugs": 225,
+      "real": 0.459,
+      "chance": 0.15,
+      "times_chance": 3.06
+    },
+    {
+      "group": "D",
+      "name": "Dermatological",
+      "n_drugs": 155,
+      "real": 0.539,
+      "chance": 0.18,
+      "times_chance": 3.0
+    },
+    {
+      "group": "L",
+      "name": "Cancer & immune",
+      "n_drugs": 232,
+      "real": 0.393,
+      "chance": 0.134,
+      "times_chance": 2.93
+    },
+    {
+      "group": "B",
+      "name": "Blood",
+      "n_drugs": 59,
+      "real": 0.2,
+      "chance": 0.072,
+      "times_chance": 2.77
+    },
+    {
+      "group": "N",
+      "name": "Nervous system",
+      "n_drugs": 356,
+      "real": 0.546,
+      "chance": 0.209,
+      "times_chance": 2.61
+    },
+    {
+      "group": "S",
+      "name": "Sensory organs",
+      "n_drugs": 145,
+      "real": 0.503,
+      "chance": 0.192,
+      "times_chance": 2.61
+    },
+    {
+      "group": "A",
+      "name": "Alimentary tract & metabolism",
+      "n_drugs": 214,
+      "real": 0.402,
+      "chance": 0.157,
+      "times_chance": 2.57
+    }
+  ]
+}
